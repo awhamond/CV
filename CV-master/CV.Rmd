@@ -1,0 +1,126 @@
+---
+name: Annie
+surname: Whamond
+#position: "Academic Tutor & Research Assistant"
+address: "Melbourne, Australia"
+profilepic: "./img/me2024.png"
+phone: +61 491 603 255
+#www: "annie-whamond.com"
+email: "annie.whamond@gmail.com"
+github: "<a href='https://github.com/awhamond'>awhamond</a>"
+orcid: 0009-0003-7201-9122
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 169169
+aboutme: "I am an intrinsically motivated learner, passionate about sharing knowledge, and enjoy research. Continually seeking opportunities to develop skills and understanding in areas of both science and the humanities."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here("r","data.r"))
+
+```
+
+# Employment
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Education
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} - {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Awards
+
+```{r HONORS}
+
+awards %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    when = year,
+    where = where
+  )
+
+```
+
+# Certifications
+
+```{r PROJECTS}
+
+certifications %>%
+  detailed_entries(
+    with = inst,
+    what = cert,
+    why = detail,
+    when = glue::glue("{startYear} - {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Skills
+
+```{r SKILLS}
+
+skills %>%
+  detailed_entries(
+    what = head,
+    why = detail
+  )
+
+```
+
+\pagebreak
+
+# Publications
+
+```{r}
+# publications %>% 
+#  bibliography_entries(
+#    file = ' ' .bib
+#  )
+```
+
+Whamond, A., Vazire, S., Clarke, B, Moodie, N., Schiavone S., Thibault, R. T., & Hardwicke, T. E. (2023). A descriptive analysis of post-publication critique policies and prevalence within psychology journals. *Unpublished*. [[PREREGISTERED PROTOCOL](https://osf.io/d6xf2)]
+
+# References
+
+Available upon request.

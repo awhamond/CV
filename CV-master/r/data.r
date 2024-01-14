@@ -11,11 +11,11 @@ work <- tribble(
 skills <- tribble(
   ~head, ~detail,
   "General Competencies", "RStudio: ggplot data visualisation, multivariate statistical analyses, reproducible research documentation",
-  "General Competencies", "Language proficiencies: intermediate German, Spanish, Middle Egyptian, and basic Latin.",
-  "General Competencies", "Confident in public speaking and leadership roles.",
-  "General Competencies", "Experienced welcoming diversity and encouraging inclusivity in classroom environments.",
-  "General Competencies", "Comfortable working independently, as a team, or supervised.",
-  "General Competencies", "Consistently punctual, professional, and reliable."
+  "General Competencies", "Language proficiencies: intermediate German, Spanish, Middle Egyptian, and basic Latin",
+  "General Competencies", "Confident in public speaking and leadership roles",
+  "General Competencies", "Experienced welcoming diversity and encouraging inclusivity in classroom environments",
+  "General Competencies", "Comfortable working independently, as a team, or supervised",
+  "General Competencies", "Consistently punctual, professional, and reliable"
 )
 
 certifications <- tribble(

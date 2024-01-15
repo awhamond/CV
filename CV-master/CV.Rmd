@@ -3,7 +3,7 @@ name: Annie
 surname: Whamond
 #position: "Academic Tutor & Research Assistant"
 address: "Melbourne, Australia"
-profilepic: "./img/me2024.png"
+profilepic: "./img/me1sml.png"
 phone: +61 491 603 255
 #www: "annie-whamond.com"
 email: "annie.whamond@gmail.com"

@@ -15,3 +15,9 @@
 *.rdb
 *.knit.md
 *cache
+
+# images
+
+*.png
+*.jpg
+*.jpeg

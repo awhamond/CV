@@ -14,7 +14,7 @@ skills <- tribble(
   "General Competencies", "Language proficiencies: intermediate German, Spanish, Middle Egyptian, and basic Latin",
   "General Competencies", "Confident in public speaking and leadership roles",
   "General Competencies", "Experienced welcoming diversity and encouraging inclusivity in classroom environments",
-  "General Competencies", "Comfortable working independently, as a team, or supervised",
+  "General Competencies", "Comfortable working independently, as part of a team, or supervised",
   "General Competencies", "Consistently punctual, professional, and reliable"
 )
 

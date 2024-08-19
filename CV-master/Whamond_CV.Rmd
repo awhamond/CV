@@ -1,8 +1,8 @@
 ---
 name: Annie
 surname: Whamond
-#position: "Academic Tutor & Research Assistant"
-address: "Melbourne, Australia"
+position: "PhD Candidate  |  Academic Tutor  |  Research Assistant"
+address: "Sydney, Australia"
 profilepic: "./img/me1sml.png"
 phone: +61 491 603 255
 #www: "annie-whamond.com"
@@ -11,7 +11,7 @@ github: "<a href='https://github.com/awhamond'>awhamond</a>"
 orcid: 0009-0003-7201-9122
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 169169
-aboutme: "I am an intrinsically motivated learner, passionate about sharing knowledge, and enjoy research. Continually seeking opportunities to develop skills and understanding in areas of both science and the humanities."
+aboutme: "I am an intrinsically motivated learner, currently conducting research in the area of metascience. Passionate about open science, particularly in the fields of psychology and medicine. Continually seeking opportunities to develop skills and understanding in areas of both science and the humanities."
 docname: CV
 output: vitae::awesomecv
 ---
@@ -37,19 +37,30 @@ source(file = here("r","data.r"))
 
 ```
 
-# Employment
+# Academic Employment
 
 ```{r EMPLOYMENT}
 
 work %>%
   detailed_entries(
     with = title,
-    what = unit,
-    why = detail,
+    what = detail,
     when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
     where = where
   )
 
+```
+
+# Other Employment
+
+```{r}
+employment %>%
+    detailed_entries(
+        with = title,
+        what = detail,
+        when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+        where = where
+    )
 ```
 
 # Education
@@ -61,13 +72,13 @@ edu %>%
     with = inst,
     what = degree,
     why = detail,
-    when = glue::glue("{startYear} - {endYear}",.na = ""),
+    when = glue::glue("{startYear} - {endYear}",.na = "Present"),
     where = where
   )
 
 ```
 
-# Awards
+# Scholarships and Awards
 
 ```{r HONORS}
 
@@ -96,7 +107,9 @@ certifications %>%
 
 ```
 
-# Skills
+\newpage
+
+# Additional Attributes
 
 ```{r SKILLS}
 
@@ -104,11 +117,10 @@ skills %>%
   detailed_entries(
     what = head,
     why = detail
+    #when = year
   )
 
 ```
-
-\pagebreak
 
 # Publications
 
@@ -119,8 +131,20 @@ skills %>%
 #  )
 ```
 
-Whamond, A., Vazire, S., Clarke, B, Moodie, N., Schiavone S., Thibault, R. T., & Hardwicke, T. E. (2023). A descriptive analysis of post-publication critique policies and prevalence within psychology journals. *Unpublished*. [[PREREGISTERED PROTOCOL](https://osf.io/d6xf2)]
+Whamond, A., Vazire, S., Clarke, B, Moodie, N., Schiavone S., Thibault, R. T., & Hardwicke, T. E. (UNSUBMITTED). How do psychology journals handle post-publication critique? A cross-sectional study of policy and practice. 
 
-# References
+[[PREREGISTERED PROTOCOL](https://osf.io/d6xf2)]
 
-Available upon request.
+# Presentations
+
+```{r}
+present %>%
+    detailed_entries(
+    with = title,
+    what = who,
+    when = glue::glue("{month} {year}",.na = ""),
+    where = where
+  )
+
+```
+
